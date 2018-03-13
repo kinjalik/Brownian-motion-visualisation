@@ -1,0 +1,64 @@
+body,
+.text-node,
+.molecular-Container {
+  display: flex;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.molecular-Container {
+  /* Для жалкого подобия браузеров | For sorry excuse for browsers */
+  width: 100%;
+  /* For Real Browsers */
+  width: 100vw;
+  margin: 10 auto;
+}
+
+.molecularSpace {
+  background: white;
+  border: 2px solid black;
+  position: relative;
+  padding: 15px;
+  z-index: 1;
+}
+
+.molecule {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: #e74c3c;
+  position: absolute;
+  z-index: -1;
+  transition: 1s linear;
+}
+
+.molecule:nth-child(odd) {
+  background: #3498db;
+}
+
+@media screen and (max-width: 500px) {
+  .molecule {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.slider {
+  max-width: 500px;
+  margin-top: 50px;
+  min-width: 300px;
+}
+
+.noUi-base {
+  background: #3a81fc;
+  background: -moz-linear-gradient(left, #3a81fc 0%, #f39c12 65%, #ff3a3a 100%);
+  background: -webkit-linear-gradient(left, #3a81fc 0%, #f39c12 65%, #ff3a3a 100%);
+  background: linear-gradient(to right, #3a81fc 0%, #f39c12 65%, #ff3a3a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a81fc', endColorstr='#ff3a3a', GradientType=1);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
